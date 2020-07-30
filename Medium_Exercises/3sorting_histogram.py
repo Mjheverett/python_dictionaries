@@ -11,6 +11,7 @@ for i in range(len(input_words)):
 
 print(string_dictionary)
 
+
 sort_dictionary = sorted(string_dictionary.items(), key=lambda x: x[1], reverse=True)
 print("The top three words are:")
 print(sort_dictionary[0])
