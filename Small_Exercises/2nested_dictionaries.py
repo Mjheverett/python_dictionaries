@@ -27,9 +27,8 @@ print(ramit_email)
 ramits_first_interest = ramit["interests"][0]
 print(ramits_first_interest)
 
-friends = ramit["friends"]
-jasmines_email = friends[0]["email"]
+jasmines_email = ramit["friends"][0]["email"]
 print(jasmines_email)
 
-jans_second_interest = friends[1]["interests"][1]
+jans_second_interest = ramit["friends"][1]["interests"][1]
 print(jans_second_interest)
