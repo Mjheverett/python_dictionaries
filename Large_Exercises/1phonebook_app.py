@@ -1,4 +1,7 @@
-phonebook = {}
+phonebook = {
+    "Melissa": "7709399393",
+    "Doug": "4049090990"
+}
 
 def phonebook_update():
     keep_updating = "Y"
@@ -11,14 +14,16 @@ def phonebook_update():
         print("3. Delete an entry")
         print("4. List all entries")
         print("5. Quit")
+        print("")
         selection = int(input("What do you want to do? "))
+        print("")
         if selection == 1:
             search_name = input("Name?: ")
             search_number = phonebook[search_name]
             print("Found entry for %s: %s" % (search_name, search_number))
         elif selection == 2:
-            add_name = input("Name: ")
-            add_phone = input("Phone Number: ")
+            add_name = str(input("Name: "))
+            add_phone = str(input("Phone Number: "))
             phonebook[add_name] = add_phone
             print("Entry stored for %s" % add_name)
         elif selection == 3:
@@ -26,7 +31,7 @@ def phonebook_update():
             del phonebook[search_name]
             print("Deleted entry for %s" % search_name)
         elif selection == 4:
-            for key, value in phonebook:
+            for key, value in phonebook.items():
                 print("Found entry for %s: %s" % (key, value))
         elif selection == 5:
             keep_updating = "N"
