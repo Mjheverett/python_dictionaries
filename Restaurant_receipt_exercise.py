@@ -3,7 +3,7 @@ menu = {
         "Steak and Eggs": 16.99, 
         "Three Egg Breakfast": 8.99, 
         "Egg Benedict": 11.99, 
-        "Biscuit and Gravy": 7.99, 
+        "Biscuits and Gravy": 7.99, 
         "Chicken Fingers": 10.99, 
         "Chicken Wrap": 8.99, 
         "Steak Salad" : 1.99
@@ -53,4 +53,12 @@ menu["Brunch"]["Three Egg Breakfast"] = {
 
 Table_1 = (menu["Brunch"]["Egg Benedict"],menu["Drinks"]["Coffee"],menu["Brunch"]["Biscuits and Gravy"],menu["Drinks"]["Coffee"],menu["Brunch"]["Steak and Eggs"],menu["Drinks"]["Soft Drink"])
 Table_2 = (menu["Brunch"]["Steak Salad"],menu["Drinks"]["Soft Drink"],menu["Specials"]["Soup of the Day"],menu["Brunch"]["Chicken Wrap"],menu["Drinks"]["Water"],menu["Brunch"]["Chicken Fingers"],menu["Drinks"]["Soft Drink"],menu["Specials"]["Chef Special"])
+price_table_1 = sum(Table_1)
+taxes_table_1 = price_table_1 * 0.08
+total_table_1 = price_table_1 + taxes_table_1
+price_table_2 = sum(Table_2)
+taxes_table_2 = price_table_2 * 0.08
+total_table_2 = price_table_2 + taxes_table_2
+print("%.2f %.2f %.2f %.2f %.2f %.2f" % (price_table_1, taxes_table_1, total_table_1, price_table_1 * .25, price_table_1 * .20, price_table_1 * .15))
+print("%.2f %.2f %.2f %.2f %.2f %.2f" % (price_table_2, taxes_table_2, total_table_2, price_table_2 * .25, price_table_2 * .20, price_table_2 * .15))
 
