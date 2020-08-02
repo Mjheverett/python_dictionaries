@@ -62,3 +62,4 @@ total_table_2 = price_table_2 + taxes_table_2
 print("%.2f %.2f %.2f %.2f %.2f %.2f" % (price_table_1, taxes_table_1, total_table_1, price_table_1 * .25, price_table_1 * .20, price_table_1 * .15))
 print("%.2f %.2f %.2f %.2f %.2f %.2f" % (price_table_2, taxes_table_2, total_table_2, price_table_2 * .25, price_table_2 * .20, price_table_2 * .15))
 
+# testing out that wakatime is actually working by pretending to do some good ole coding.
