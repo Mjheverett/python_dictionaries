@@ -51,15 +51,69 @@ menu["Brunch"]["Three Egg Breakfast"] = {
 #   Guest 3: Chicken Fingers, Soft Drink
 #   For the Table: Chef Special
 
-Table_1 = (menu["Brunch"]["Egg Benedict"],menu["Drinks"]["Coffee"],menu["Brunch"]["Biscuits and Gravy"],menu["Drinks"]["Coffee"],menu["Brunch"]["Steak and Eggs"],menu["Drinks"]["Soft Drink"])
-Table_2 = (menu["Brunch"]["Steak Salad"],menu["Drinks"]["Soft Drink"],menu["Specials"]["Soup of the Day"],menu["Brunch"]["Chicken Wrap"],menu["Drinks"]["Water"],menu["Brunch"]["Chicken Fingers"],menu["Drinks"]["Soft Drink"],menu["Specials"]["Chef Special"])
-price_table_1 = sum(Table_1)
+#Table_1 = (menu["Brunch"]["Egg Benedict"],menu["Drinks"]["Coffee"],menu["Brunch"]["Biscuits and Gravy"],menu["Drinks"]["Coffee"],menu["Brunch"]["Steak and Eggs"],menu["Drinks"]["Soft Drink"])
+Table_1 = (
+    "Egg Benedict",
+    "Coffee",
+    "Biscuits and Gravy",
+    "Coffee",
+    "Steak and Eggs",
+    "Soft Drink"
+)
+
+# Table_2 = (menu["Brunch"]["Steak Salad"],menu["Drinks"]["Soft Drink"],menu["Specials"]["Soup of the Day"],menu["Brunch"]["Chicken Wrap"],menu["Drinks"]["Water"],menu["Brunch"]["Chicken Fingers"],menu["Drinks"]["Soft Drink"],menu["Specials"]["Chef Special"])
+Table_2 = {
+    "Guest1": {
+        "Steak Salad",
+        "Soft Drink"
+    },
+    "Guest2": {
+        "Soup of the Day",
+        "Chicken Wrap",
+        "Water"
+    },
+    "Guest3": {
+        "Chicken Fingers",
+        "Soft Drink"
+    },
+    "FortheTable": {
+        "Chef Special"
+    }
+}
+price_table_1 = 0
+price_table_2 = 0
+
+for items in Table_1:
+    if items in menu["Brunch"]:
+        print(items)
+        price_table_1 += menu["Brunch"][items]
+    elif items in menu["Drinks"]:
+        print(items)
+        price_table_1 += menu["Drinks"][items]
+    elif items in menu["Specials"]:
+        print(items)
+        price_table_1 += menu["Specials"][items]
+
 taxes_table_1 = price_table_1 * 0.08
 total_table_1 = price_table_1 + taxes_table_1
-price_table_2 = sum(Table_2)
+
+for items in Table_2:
+    if items in menu["Brunch"]:
+        print(items)
+        price_table_2 += menu["Brunch"][items]
+    elif items in menu["Drinks"]:
+        print(items)
+        price_table_2 += menu["Drinks"][items]
+    elif items in menu["Specials"]:
+        print(items)
+        price_table_2 += menu["Specials"][items]
+
 taxes_table_2 = price_table_2 * 0.08
 total_table_2 = price_table_2 + taxes_table_2
-print("%.2f %.2f %.2f %.2f %.2f %.2f" % (price_table_1, taxes_table_1, total_table_1, price_table_1 * .25, price_table_1 * .20, price_table_1 * .15))
-print("%.2f %.2f %.2f %.2f %.2f %.2f" % (price_table_2, taxes_table_2, total_table_2, price_table_2 * .25, price_table_2 * .20, price_table_2 * .15))
+# print("%.2f %.2f %.2f %.2f %.2f %.2f" % (price_table_1, taxes_table_1, total_table_1, price_table_1 * .25, price_table_1 * .20, price_table_1 * .15))
+# print("%.2f %.2f %.2f %.2f %.2f %.2f" % (price_table_2, taxes_table_2, total_table_2, price_table_2 * .25, price_table_2 * .20, price_table_2 * .15))
+
+# for items in Table_1:
+#     print("%s " % (items))
 
 # testing out that wakatime is actually working by pretending to do some good ole coding.
